@@ -68,6 +68,26 @@ public class Employee {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+	 @Override
+	  public int hashCode() {
+	    int hash = 1;
+	    hash = hash * 17 + this.firstName.hashCode();
+	    hash = hash * 31 + this.id;
+	    return hash;
+	  }
+	
+	 @Override
+	 public boolean equals(Object obj) {
+	   if (obj == this) {
+	     return true;
+	   }
+	   if (!(obj instanceof Employee)) {
+	     return false;
+	   }
+	   Employee empObj = (Employee) obj;
+	   return this.id == empObj.id;
+	 }
 
 	@Override
 	public String toString(){

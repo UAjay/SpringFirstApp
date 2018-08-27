@@ -119,6 +119,16 @@
 	</c:forEach>
 	</table>
 </c:if>
+
+<h2>Hash Map</h2>
+<c:forEach items="${employeeHash}" var="entry">
+    Key = ${entry.key}, value = ${entry.value}<br>
+</c:forEach>
+
+<h2>Hash Set</h2>
+<c:forEach items="${employeeSet}" var="blist">
+       ${blist}<br>
+   </c:forEach>
 </div>
 <Script>
 function search(){
